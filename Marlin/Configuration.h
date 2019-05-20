@@ -1021,7 +1021,7 @@
   //#define LEFT_PROBE_BED_POSITION MIN_PROBE_EDGE
   //#define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
   //#define FRONT_PROBE_BED_POSITION MIN_PROBE_EDGE
-  #define BACK_PROBE_BED_POSITION (MAX_PROBE_Y - 12) //prevent nozzle or fan from crashing into bedclips, must be smaller than 204=MAX_PROBE_Y
+  #define BACK_PROBE_BED_POSITION (MAX_PROBE_Y - 20) //prevent nozzle or fan from crashing into bedclips, must be smaller than 204=MAX_PROBE_Y
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
