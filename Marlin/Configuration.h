@@ -372,9 +372,9 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
   // Creality Ender-3
-  #define DEFAULT_Kp 25.6
-  #define DEFAULT_Ki 2.5
-  #define DEFAULT_Kd 65.53
+  #define DEFAULT_Kp 23.97
+  #define DEFAULT_Ki 2.17
+  #define DEFAULT_Kd 66.26
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
