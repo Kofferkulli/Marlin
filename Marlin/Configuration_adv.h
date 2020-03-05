@@ -1902,14 +1902,18 @@
 #elif ENABLED(SDSUPPORT)
   #define BLOCK_BUFFER_SIZE 16
 #else
+<<<<<<< HEAD
   #define BLOCK_BUFFER_SIZE 16
+=======
+  #define BLOCK_BUFFER_SIZE 32 // maximize block buffer
+>>>>>>> increase BLOCK_BUFFER
 #endif
 
 // @section serial
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 32
+#define BUFSIZE 16
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of PROGMEM (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
