@@ -767,7 +767,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 404 } //E-Steps 101 for 1/16 microstepping
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 377 } //E-Microstepping 1/64, calculated E-value 372.5steps/mm (10,95mm extruder wheel)
 
 /**
  * Default Max Feed Rate (mm/s)
