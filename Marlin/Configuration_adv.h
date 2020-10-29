@@ -645,20 +645,11 @@
 
 // @section homing
 
-<<<<<<< HEAD
 /**
  * Homing Procedure
  * Homing (G28) does an indefinite move towards the endstops to establish
  * the position of the toolhead relative to the workspace.
  */
-=======
-// Homing hits each endstop, retracts by these distances, then does a slower bump.
-#define X_HOME_BUMP_MM 5
-#define Y_HOME_BUMP_MM 5
-#define Z_HOME_BUMP_MM 2
-#define HOMING_BUMP_DIVISOR { 2, 2, 4 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
-#define QUICK_HOME                       // If homing includes X and Y, do a diagonal move initially
->>>>>>> modify Configuration_adv.h to fit my printer
 
 //#define SENSORLESS_BACKOFF_MM  { 2, 2 }     // (mm) Backoff from endstops before sensorless homing
 
@@ -1902,11 +1893,7 @@
 #elif ENABLED(SDSUPPORT)
   #define BLOCK_BUFFER_SIZE 16
 #else
-<<<<<<< HEAD
-  #define BLOCK_BUFFER_SIZE 16
-=======
   #define BLOCK_BUFFER_SIZE 32 // maximize block buffer
->>>>>>> increase BLOCK_BUFFER
 #endif
 
 // @section serial

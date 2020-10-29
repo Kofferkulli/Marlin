@@ -491,43 +491,17 @@
   //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
-<<<<<<< HEAD
-=======
-  #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
-                                  // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
-
-  // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-  // Creality Ender-3
-  #define DEFAULT_Kp 23.97
-  #define DEFAULT_Ki 2.17
-  #define DEFAULT_Kd 66.26
-
-  // Ultimaker
-  //#define DEFAULT_Kp 22.2
-  //#define DEFAULT_Ki 1.08
-  //#define DEFAULT_Kd 114
-
-  // MakerGear
-  //#define DEFAULT_Kp 7.0
-  //#define DEFAULT_Ki 0.1
-  //#define DEFAULT_Kd 12
-
-  // Mendel Parts V9 on 12V
-  //#define DEFAULT_Kp 63.0
-  //#define DEFAULT_Ki 2.25
-  //#define DEFAULT_Kd 440
->>>>>>>  modify configuration.h to fit my printer
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  22.20,  22.20 }
-    #define DEFAULT_Ki_LIST {   1.08,   1.08 }
-    #define DEFAULT_Kd_LIST { 114.00, 114.00 }
+    #define DEFAULT_Kp_LIST {  23.97,  23.97 }
+    #define DEFAULT_Ki_LIST {   2.17,   2.17 }
+    #define DEFAULT_Kd_LIST {  66.26,  66.26 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    #define DEFAULT_Kp  23.97
+    #define DEFAULT_Ki   2.17
+    #define DEFAULT_Kd  66.26
   #endif
 #endif // PIDTEMP
 
@@ -838,13 +812,7 @@
  *   https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-<<<<<<< HEAD
-  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
-  #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
-                                      // for small segments (< 1mm) with large junction angles (> 135°).
-=======
   #define JUNCTION_DEVIATION_MM 0.08  // (mm) Distance from real junction edge
->>>>>>> compare config files with custom configs
 #endif
 
 /**
@@ -1020,15 +988,8 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-<<<<<<< HEAD
-<<<<<<< HEAD
-#define PROBING_MARGIN 10
-=======
-#define MIN_PROBE_EDGE 3
->>>>>>> change MIN_PROBE_EDGE to 3mm
-=======
+
 #define PROBING_MARGIN 4
->>>>>>> change probing margin to 4
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_SPEED (133*60)
@@ -1430,13 +1391,8 @@
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
 #endif
 
-<<<<<<< HEAD
-// Homing speeds (mm/min)
-#define HOMING_FEEDRATE_XY (50*60)
-=======
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (20*60)
->>>>>>> compare config files with custom configs
 #define HOMING_FEEDRATE_Z  (4*60)
 
 // Validate that endstops are triggered on homing moves
@@ -2454,10 +2410,5 @@
 // Only power servos during movement, otherwise leave off to prevent jitter
 #define DEACTIVATE_SERVOS_AFTER_MOVE
 
-<<<<<<< HEAD
-// Edit servo angles with M281 and save to EEPROM with M500
-//#define EDITABLE_SERVO_ANGLES
-=======
 // Allow servo angle to be edited and saved to EEPROM
 #define EDITABLE_SERVO_ANGLES
->>>>>>>  modify configuration.h to fit my printer
